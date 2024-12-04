@@ -15,16 +15,7 @@ const TermsConditions = () => {
   
   return (
     <div className="text-white flex flex-col justify-center w-screen items-center gap-7 pt-48 p-10">
-      {/* Animated "5 Spots Left" */}
-      <motion.p
-        className="text-gray-400 rounded-full border border-gray-800 w-[9rem] text-center p-2 bg-black"
-        initial="hidden"
-        animate="visible"
-        custom={0}
-        variants={textVariant}
-      >
-        Our Service
-      </motion.p>
+ 
 
       {/* Animated Date Text */}
       <motion.h1
@@ -35,7 +26,7 @@ const TermsConditions = () => {
         variants={textVariant}
       >
         {" "}
-        Build. Launch. Succeed
+        Term & Conditions
       </motion.h1>
 
       <motion.p
@@ -48,23 +39,6 @@ const TermsConditions = () => {
         We create your SaaS product quickly and efficiently. Post-launch, we
         empower you with marketing tools like AirMedia to achieve success.
       </motion.p>
-
-      <div className="flex flex-col gap-6 md:flex-row w-full items-center justify-center md:gap-14 p-4">
-        {/* Card 1 */}
-        <div className="border rounded-2xl flex justify-center items-center border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
-          <div className="text-center text-gray-500">Content Placeholder</div>
-        </div>
-
-        {/* Card 2 */}
-        <div className="border rounded-2xl flex justify-center items-center border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
-          <div className="text-center text-gray-500">Content Placeholder</div>
-        </div>
-
-        {/* Card 3 */}
-        <div className="border rounded-2xl flex justify-center items-center border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
-          <div className="text-center text-gray-500">Content Placeholder</div>
-        </div>
-      </div>
     </div>
   );
 };

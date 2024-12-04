@@ -48,6 +48,53 @@ const Contact = () => {
         Our team is ready to support you with expert advice & solutions.
       </motion.p>
 
+      <div className="flex pt-28 w-screen justify-center flex-wrap gap-6">
+        {/* First Card */}
+        <div className="border-gray-600 text-center p-9 flex flex-col gap-7 w-[30rem] border-b-2 md:border-b-0 md:border-r-2">
+          <p>lyiee</p>
+          <p>lyiee</p>
+          <div>
+            <p>"The speed and quality at which the</p>
+            <p>QuickMVP team was able to transform</p>
+            <p>my idea into a product was impressing."</p>
+          </div>
+          <div>
+            <h1>Marwan Zeggari</h1>
+            <p>Founder</p>
+          </div>
+        </div>
+
+        {/* Second Card */}
+        <div className="border-gray-600 text-center p-9 flex flex-col gap-7 w-[30rem] border-b-2 md:border-b-0 md:border-r-2">
+          <p>lyiee</p>
+          <p>lyiee</p>
+          <div>
+            <p>"The speed and quality at which the</p>
+            <p>QuickMVP team was able to transform</p>
+            <p>my idea into a product was impressing."</p>
+          </div>
+          <div>
+            <h1>Marwan Zeggari</h1>
+            <p>Founder</p>
+          </div>
+        </div>
+
+        {/* Third Card */}
+        <div className="border-gray-600 text-center p-9 flex flex-col gap-7 w-[30rem] border-b-2 md:border-b-0 md:border-r-2">
+          <p>lyiee</p>
+          <p>lyiee</p>
+          <div>
+            <p>"The speed and quality at which the</p>
+            <p>QuickMVP team was able to transform</p>
+            <p>my idea into a product was impressing."</p>
+          </div>
+          <div>
+            <h1>Marwan Zeggari</h1>
+            <p>Founder</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

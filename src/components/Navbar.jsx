@@ -79,7 +79,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link to="/terms" className="hover:text-white text-base">
+                <Link to="/terms&conditions" className="hover:text-white text-base">
                   Terms & Conditions
                 </Link>
               </li>
