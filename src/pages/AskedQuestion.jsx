@@ -28,7 +28,7 @@ const AskedQuestion = () => {
   };
 
   return (
-    <div className="text-white flex flex-col justify-center items-center gap-7 pt-36 px-4 md:px-0">
+    <div className="text-white flex flex-col justify-center items-center gap-7 mt-36 px-4 md:px-0">
       {/* Animated "Need to Know" Badge */}
       <motion.p
         className="text-gray-400 rounded-full border border-gray-800 w-36 text-center p-2 bg-black"

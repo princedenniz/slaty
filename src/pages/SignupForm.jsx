@@ -58,7 +58,7 @@ const SignupForm = () => {
   }
 
   return (
-    <div className="px-20- w-screen flex flex-col justify-center items-center mx-auto pt-36">
+    <div className="px-20- w-screen flex flex-col justify-center items-center mx-auto mt-36">
       <h1 className="text-2xl font-bold mb-4">Sign Up for the Waitlist</h1>
       <input
         type="text"

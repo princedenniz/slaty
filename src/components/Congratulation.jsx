@@ -26,7 +26,7 @@ const Congratulation = ({ data}) => {
   )}`;
 
   return (
-    <div className="flex flex-col justify-center w-screen text-white p-2 pt-36 rounded-md space-y-4 text-center">
+    <div className="flex flex-col justify-center w-screen text-white p-2 mt-36 rounded-md space-y-4 text-center">
       <p className="text-[1.5rem] font-semibold">Successfully signed up for SLATY!</p>
 
       {/* Referral Link Section */}

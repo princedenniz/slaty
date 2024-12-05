@@ -13,9 +13,11 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import TermsConditions from "./components/TermsCondition";
 import SignupForm from "./pages/SignupForm";
+import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
     <Router>
+      <ScrollToTop/>
       <Navbar/>
       <Routes>
         {/* Home Route */}
