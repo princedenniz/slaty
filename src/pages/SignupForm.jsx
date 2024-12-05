@@ -58,9 +58,9 @@ const SignupForm = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-lg px-6 py-8 mx-auto mt-36 bg-white rounded-lg shadow-lg"
+        className="w-full max-w-lg px-6 py-8 mx-auto mt-36 bg-gray-300 rounded-lg shadow-lg"
       >
-        <h1 className="text-3xl font-bold text-center text-indigo-600 mb-6">
+        <h1 className="text-3xl font-bold text-center text-orange-500 mb-6">
           Join the Waitlist
         </h1>
 
@@ -71,7 +71,7 @@ const SignupForm = () => {
             placeholder="First Name"
             value={formData.first_name}
             onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-orange-500"
           />
           <input
             type="text"
@@ -79,7 +79,7 @@ const SignupForm = () => {
             placeholder="Last Name"
             value={formData.last_name}
             onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-orange-500"
           />
           <input
             type="email"
@@ -87,7 +87,7 @@ const SignupForm = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-orange-500"
           />
           <input
             type="text"
@@ -95,7 +95,7 @@ const SignupForm = () => {
             placeholder="Phone Number"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-orange-500"
           />
         </div>
 
@@ -104,7 +104,7 @@ const SignupForm = () => {
           onClick={handleSubmit}
           disabled={mutation.isLoading}
           className={`w-full px-4 py-3 mt-4 text-white rounded ${
-            mutation.isLoading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
+            mutation.isLoading ? "bg-gray-400" : "bg-orange-500 hover:bg-orange-500"
           }`}
         >
           {mutation.isLoading ? "Submitting..." : "Sign Up"}

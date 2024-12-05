@@ -26,7 +26,7 @@ const Congratulation = ({ data }) => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full min-h-screen p-6 mt-28 text-white bg-gray-900 animate-fadeIn">
-      <h1 className="text-3xl font-bold text-indigo-500 mb-4 animate-bounce">
+      <h1 className="text-3xl font-bold text-orange-500 mb-4 animate-bounce">
         Congratulations!
       </h1>
       <p className="text-lg font-medium mb-6">
@@ -38,7 +38,7 @@ const Congratulation = ({ data }) => {
         <p className="mb-2 text-sm font-semibold">Referral link:</p>
         <p
           onClick={handleCopyLink}
-          className="break-all text-indigo-400 cursor-pointer hover:text-indigo-500"
+          className="break-all text-orange-500 cursor-pointer hover:text-orange-500"
         >
           {data.referral_link}
         </p>
@@ -60,7 +60,7 @@ const Congratulation = ({ data }) => {
       {/* Total Referrals */}
       <div className="mt-6 p-4 bg-gray-800 border border-gray-600 rounded-md w-full max-w-md">
         <p className="font-medium text-lg">Total referrals:</p>
-        <p className="text-2xl font-extrabold text-indigo-400">
+        <p className="text-2xl font-extrabold text-orange-500">
           {data.total_referrals}
         </p>
       </div>
@@ -93,7 +93,7 @@ const Congratulation = ({ data }) => {
       {/* Return Button */}
       <Link
         to="/"
-        className="mt-8 px-6 py-3 bg-indigo-600 rounded-md text-white text-lg hover:bg-indigo-700 transform hover:scale-105 transition duration-300"
+        className="mt-8 px-6 py-3 bg-orange-500 rounded-md text-white text-lg hover:bg-orange-500 transform hover:scale-105 transition duration-300"
       >
         Return to Signup
       </Link>
