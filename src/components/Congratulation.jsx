@@ -25,7 +25,7 @@ const Congratulation = ({ data }) => {
   )}`;
 
   return (
-    <div className="flex flex-col items-center justify-center w-full min-h-screen p-6 mt-28 text-white bg-gray-900 animate-fadeIn">
+    <div className="flex flex-col items-center justify-center w-full min-h-screen p-6 mt-28 text-white animate-fadeIn">
       <h1 className="text-3xl font-bold text-orange-600 mb-4 animate-bounce">
         Congratulations!
       </h1>
