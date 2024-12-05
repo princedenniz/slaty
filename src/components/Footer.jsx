@@ -75,28 +75,28 @@ const Footer = () => {
       <div className="flex flex-wrap justify-center gap-6 md:gap-12 text-gray-400 mt-6">
       <Link
             // key={i}
-            to="/terms&conditions"
+            to="/how-it-works"
             className="hover:text-orange-500 transition duration-300 text-sm md:text-base"
           >
             How it Works
           </Link>
       <Link
             // key={i}
-            to="/terms&conditions"
+            to="/mission"
             className="hover:text-orange-500 transition duration-300 text-sm md:text-base"
           >
             Mission
           </Link>
       <Link
             // key={i}
-            to="/terms&conditions"
+            to="/work"
             className="hover:text-orange-500 transition duration-300 text-sm md:text-base"
           >
             Works
           </Link>
       <Link
             // key={i}
-            to="/terms&conditions"
+            to="/service"
             className="hover:text-orange-500 transition duration-300 text-sm md:text-base"
           >
             Services

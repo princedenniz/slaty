@@ -59,7 +59,7 @@ const AskedQuestion = () => {
           onClick={() => toggleDropdown('question1')}
         >
           <div className="flex justify-between items-center">
-            <h2 className="text-sm font-semibold md:text-3xl">What's Included In The MVP?</h2>
+            <h2 className="text-sm font-semibold md:text-2xl">What's Included In The MVP?</h2>
             <GoChevronDown
               className={`text-white transition-transform duration-300 ${dropdownState.question1 ? 'rotate-180' : ''}`}
             />
@@ -87,7 +87,7 @@ const AskedQuestion = () => {
           onClick={() => toggleDropdown('question2')}
         >
           <div className="flex justify-between items-center">
-            <h2 className="text-sm font-semibold md:text-3xl">What Is The Timeline For Delivery?</h2>
+            <h2 className="text-sm font-semibold md:text-2xl">What Is The Timeline For Delivery?</h2>
             <GoChevronDown
               className={`text-white transition-transform duration-300 ${dropdownState.question2 ? 'rotate-180' : ''}`}
             />
@@ -115,7 +115,7 @@ const AskedQuestion = () => {
           onClick={() => toggleDropdown('question3')}
         >
           <div className="flex justify-between items-center">
-            <h2 className="text-sm font-semibold md:text-3xl">How Much Does It Cost?</h2>
+            <h2 className="text-sm font-semibold md:text-2xl">How Much Does It Cost?</h2>
             <GoChevronDown
               className={`text-white transition-transform duration-300 ${dropdownState.question3 ? 'rotate-180' : ''}`}
             />

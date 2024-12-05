@@ -12,6 +12,7 @@ import AskedQuestion from "./pages/AskedQuestion";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import TermsConditions from "./components/TermsCondition";
+import SignupForm from "./pages/SignupForm";
 const App = () => {
   return (
     <Router>
@@ -22,6 +23,7 @@ const App = () => {
 
         {/* Signup Route */}
         <Route path="/how-it-works" element={<HowItWorks/>} />
+        <Route path="/signup" element={<SignupForm/>} />
 
         {/* Congratulations Route */}
         <Route path="/mission" element={<Mission/>}/>

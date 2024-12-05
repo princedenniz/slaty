@@ -16,13 +16,13 @@ const LogoCarousel = () => {
   ];
 
   return (
-    <div className="text-white flex flex-col justify-center w-screen items-center gap-7 pt-14">
+    <div className="text-white flex flex-col justify-center w-full items-center gap-7 pt-14">
       <p className="text-gray-500">
         Building the future One Platform at a Time
       </p>
 
       {/* Image Carousel Container */}
-      <div className="overflow-hidden w-[70rem]">
+      <div className="overflow-hidden w-full md:w-[70rem]">
         <motion.div
           className="flex items-center justify-center gap-16 whitespace-nowrap"
           animate={{ x: ['0%', '-100%'] }}
@@ -37,7 +37,7 @@ const LogoCarousel = () => {
             <h1
               key={idx}
               className={`font-bold text-2xl ${
-                idx = 9 === 0 ? 'text-white' : 'text-white'
+                idx % 2 === 0 ? 'text-white' : 'text-orange-500'
               }`}
             >
               {logo}
