@@ -66,7 +66,7 @@ const SignupForm = () => {
         placeholder="First Name"
         value={formData.first_name}
         onChange={handleChange}
-        className="block w-full p-2 mb-2 border rounded"
+        className="block w-full p-2 mb-2 bg-gray-400 border rounded"
       />
       <input
         type="text"
@@ -74,7 +74,7 @@ const SignupForm = () => {
         placeholder="Last Name"
         value={formData.last_name}
         onChange={handleChange}
-        className="block w-full p-2 mb-2 border rounded"
+        className="block w-full p-2 mb-2 bg-gray-400 border rounded"
       />
       <input
         type="email"
@@ -82,7 +82,7 @@ const SignupForm = () => {
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        className="block w-full p-2 mb-2 border rounded"
+        className="block w-full p-2 mb-2 bg-gray-400 border rounded"
       />
       <input
         type="text"
@@ -90,7 +90,7 @@ const SignupForm = () => {
         placeholder="Phone Number"
         value={formData.phone}
         onChange={handleChange}
-        className="block w-full p-2 mb-4 border rounded"
+        className="block w-full p-2 mb-4 bg-gray-400 border rounded"
       />
       <button
         type="button"
