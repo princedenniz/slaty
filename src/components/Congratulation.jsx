@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { FaTwitter, FaWhatsapp } from "react-icons/fa"; // Icons for social sharing
+import { FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Congratulation = ({ data}) => {
-  const [copied, setCopied] = useState(false); // Track if the link is copied
-  console.log(data)
+const Congratulation = ({ data }) => {
+  const [copied, setCopied] = useState(false);
 
-  // Function to copy the referral link
+  // Copy referral link to clipboard
   const handleCopyLink = () => {
     navigator.clipboard
       .writeText(data.referral_link)
@@ -16,7 +15,7 @@ const Congratulation = ({ data}) => {
       })
       .catch(() => alert("Failed to copy referral link. Please try again."));
   };
-  
+
   // Social media share URLs
   const twitterShareUrl = `https://twitter.com/intent/tweet?text=Join%20me%20on%20SLATY!%20Here%20is%20my%20referral%20link:%20${encodeURIComponent(
     data.referral_link
@@ -26,143 +25,80 @@ const Congratulation = ({ data}) => {
   )}`;
 
   return (
-    <div className="flex flex-col justify-center w-screen text-white p-2 mt-36 rounded-md space-y-4 text-center">
-      <p className="text-[1.5rem] font-semibold">Successfully signed up for SLATY!</p>
+    <div className="flex flex-col items-center justify-center w-full min-h-screen p-6 mt-28 text-white bg-gray-900 animate-fadeIn">
+      <h1 className="text-3xl font-bold text-indigo-500 mb-4 animate-bounce">
+        Congratulations!
+      </h1>
+      <p className="text-lg font-medium mb-6">
+        You've successfully signed up for SLATY!
+      </p>
 
       {/* Referral Link Section */}
-      <div className="border border-gray-200 p-4 rounded-md relative">
-        <p className="text-[13px] font-medium mb-2">Referral link:</p>
-        <span
+      <div className="relative p-4 bg-gray-800 border border-gray-600 rounded-md shadow-md w-full max-w-md">
+        <p className="mb-2 text-sm font-semibold">Referral link:</p>
+        <p
           onClick={handleCopyLink}
-          className="text-indigo-600 break-all cursor-pointer underline"
+          className="break-all text-indigo-400 cursor-pointer hover:text-indigo-500"
         >
           {data.referral_link}
-        </span>
+        </p>
         {copied && (
-          <span className="absolute top-2 right-2 text-green-500 text-sm">
+          <span className="absolute top-2 right-2 text-green-500 text-sm animate-pulse">
             Copied!
           </span>
         )}
       </div>
 
       {/* Position Info */}
-      <div className="border border-gray-200 p-4 rounded-md">
-        <p className="font-medium">Your position:</p>
-        <p className="text-xl font-bold">{data.priority}</p>
-      </div>
-
-      {/* Total Referrals */}
-      <div className="border border-gray-200 p-4 rounded-md">
-        <p className="font-medium">
-          Total referrals: <b className="text-xl">{data.total_referrals}</b>
+      <div className="mt-6 p-4 bg-gray-800 border border-gray-600 rounded-md w-full max-w-md">
+        <p className="font-medium text-lg">Your position:</p>
+        <p className="text-2xl font-extrabold text-indigo-400">
+          #{data.priority}
         </p>
       </div>
 
-      <p className="text-[14px]">Share and refer your friends to move up in line!</p>
+      {/* Total Referrals */}
+      <div className="mt-6 p-4 bg-gray-800 border border-gray-600 rounded-md w-full max-w-md">
+        <p className="font-medium text-lg">Total referrals:</p>
+        <p className="text-2xl font-extrabold text-indigo-400">
+          {data.total_referrals}
+        </p>
+      </div>
 
       {/* Social Media Share Buttons */}
-      <div className="flex justify-center gap-4">
+      <p className="mt-6 text-sm text-gray-300">
+        Share your link to climb the leaderboard!
+      </p>
+      <div className="flex justify-center gap-6 mt-4">
         <a
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full"
+          className="p-4 bg-blue-500 rounded-full hover:bg-blue-600 shadow-lg hover:scale-110 transform transition duration-300"
+          title="Share on Twitter"
         >
-          <FaTwitter size={24} />
+          <FaTwitter size={28} className="text-white" />
         </a>
         <a
           href={whatsappShareUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full"
+          className="p-4 bg-green-500 rounded-full hover:bg-green-600 shadow-lg hover:scale-110 transform transition duration-300"
+          title="Share on WhatsApp"
         >
-          <FaWhatsapp size={24} />
+          <FaWhatsapp size={28} className="text-white" />
         </a>
       </div>
-      <Link to="/"
-        //   type="button"
-        //   onClick={onReturn}
-          className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-md px-4 py-2 mt-4"
-        >
-          Return to Signup
-        </Link>
+
+      {/* Return Button */}
+      <Link
+        to="/"
+        className="mt-8 px-6 py-3 bg-indigo-600 rounded-md text-white text-lg hover:bg-indigo-700 transform hover:scale-105 transition duration-300"
+      >
+        Return to Signup
+      </Link>
     </div>
   );
 };
 
 export default Congratulation;
-
-
-
-
-
-// // WaitlistSuccess.js
-// import React, { useState } from "react";
-// import { FaTwitter, FaWhatsapp } from "react-icons/fa";
-// import { copyReferralLink } from "../api/waitService"; // Import API function
-
-// const Congratulation = ({ data, onReturn }) => {
-//   const [copied, setCopied] = useState(false);
-
-//   const handleCopyLink = async () => {
-//     const success = await copyReferralLink(data.referral_link);
-//     if (success) {
-//       setCopied(true);
-//       setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
-//     } else {
-//       alert("Failed to copy referral link. Please try again.");
-//     }
-//   };
-
-//   const twitterShareUrl = `https://twitter.com/intent/tweet?text=Join%20me%20on%20SLATY!%20Here%20is%20my%20referral%20link:%20${encodeURIComponent(
-//     data.referral_link
-//   )}`;
-//   const whatsappShareUrl = `https://api.whatsapp.com/send?text=Join%20me%20on%20SLATY!%20Here%20is%20my%20referral%20link:%20${encodeURIComponent(
-//     data.referral_link
-//   )}`;
-
-//   return (
-//     <div className="p-6 rounded-md space-y-4 text-center">
-//       <h1 className="text-xl font-bold">Successfully signed up for SLATY!</h1>
-//       <div className="border p-4 rounded-md">
-//         <p>Referral link:</p>
-//         <span
-//           onClick={handleCopyLink}
-//           className="text-indigo-600 break-all cursor-pointer underline"
-//         >
-//           {data.referral_link}
-//         </span>
-//         {copied && <p className="text-green-500">Copied!</p>}
-//       </div>
-
-//       <div className="border p-4 rounded-md">
-//         <p>Your position:</p>
-//         <p className="text-xl font-bold">{data.priority}</p>
-//       </div>
-
-//       <div className="border p-4 rounded-md">
-//         <p>Total referrals:</p>
-//         <p className="text-xl font-bold">{data.total_referrals}</p>
-//       </div>
-
-//       <div className="flex justify-center gap-4">
-//         <a href={twitterShareUrl} target="_blank" rel="noopener noreferrer">
-//           <FaTwitter size={24} className="text-blue-500" />
-//         </a>
-//         <a href={whatsappShareUrl} target="_blank" rel="noopener noreferrer">
-//           <FaWhatsapp size={24} className="text-green-500" />
-//         </a>
-//       </div>
-
-//       <button
-//         onClick={onReturn}
-//         className="bg-indigo-600 hover:bg-indigo-700 text-white rounded px-4 py-2 mt-4"
-//       >
-//         Return to Signup
-//       </button>
-//     </div>
-//   );
-// };
-
-// export default Congratulation;
-

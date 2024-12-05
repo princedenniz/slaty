@@ -1,7 +1,7 @@
-// src/components/SignupForm.jsx
 import React, { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import Congratulation from "../components/Congratulation"; // Import the Congratulation component
+import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion for animations
+import Congratulation from "../components/Congratulation"; // Adjust path if needed
 
 const submitWaitlistData = async (data) => {
   const response = await fetch("https://api.getwaitlist.com/api/v1/waiter", {
@@ -29,7 +29,7 @@ const SignupForm = () => {
     mutationFn: submitWaitlistData,
     onSuccess: (data) => {
       console.log("Signed up successfully:", data);
-      setSuccessData(data); // Store data for success display
+      setSuccessData(data);
     },
     onError: (err) => {
       setError("Failed to sign up. Please try again.");
@@ -48,60 +48,70 @@ const SignupForm = () => {
   };
 
   if (successData) {
-    return (
-      <Congratulation data={successData}
-        
-        // referralLink={successData.referralLink || document.URL}
-        // position={successData.position || "Unknown"}
-      />
-    );
+    return <Congratulation data={successData} />;
   }
 
   return (
-    <div className="px-20- w-screen flex flex-col justify-center items-center mx-auto mt-36">
-      <h1 className="text-2xl font-bold mb-4">Sign Up for the Waitlist</h1>
-      <input
-        type="text"
-        name="first_name"
-        placeholder="First Name"
-        value={formData.first_name}
-        onChange={handleChange}
-        className="block w-full p-2 mb-2 bg-gray-400 border rounded"
-      />
-      <input
-        type="text"
-        name="last_name"
-        placeholder="Last Name"
-        value={formData.last_name}
-        onChange={handleChange}
-        className="block w-full p-2 mb-2 bg-gray-400 border rounded"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-        className="block w-full p-2 mb-2 bg-gray-400 border rounded"
-      />
-      <input
-        type="text"
-        name="phone"
-        placeholder="Phone Number"
-        value={formData.phone}
-        onChange={handleChange}
-        className="block w-full p-2 mb-4 bg-gray-400 border rounded"
-      />
-      <button
-        type="button"
-        onClick={handleSubmit}
-        disabled={mutation.isLoading}
-        className="bg-indigo-600 text-white w-full px-4 py-2 rounded"
+    <AnimatePresence>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+        className="w-full max-w-lg px-6 py-8 mx-auto mt-36 bg-white rounded-lg shadow-lg"
       >
-        {mutation.isLoading ? "Submitting..." : "Sign Up"}
-      </button>
-      {error && <p className="text-red-500 mt-2">{error}</p>}
-    </div>
+        <h1 className="text-3xl font-bold text-center text-indigo-600 mb-6">
+          Join the Waitlist
+        </h1>
+
+        <div className="space-y-4">
+          <input
+            type="text"
+            name="first_name"
+            placeholder="First Name"
+            value={formData.first_name}
+            onChange={handleChange}
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+          />
+          <input
+            type="text"
+            name="last_name"
+            placeholder="Last Name"
+            value={formData.last_name}
+            onChange={handleChange}
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full p-3 border rounded bg-gray-50 focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        <button
+          type="button"
+          onClick={handleSubmit}
+          disabled={mutation.isLoading}
+          className={`w-full px-4 py-3 mt-4 text-white rounded ${
+            mutation.isLoading ? "bg-gray-400" : "bg-indigo-600 hover:bg-indigo-700"
+          }`}
+        >
+          {mutation.isLoading ? "Submitting..." : "Sign Up"}
+        </button>
+        {error && <p className="mt-4 text-sm text-red-500">{error}</p>}
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
