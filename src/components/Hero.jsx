@@ -88,7 +88,7 @@ const Hero = () => {
 
         {/* Animated Button */}
         <Link
-          to="/signup"
+          to="/newwidget"
           // target="_blank"
           rel="noopener noreferrer"
           className="border border-gray-800 bg-gradient-to-r from-orange-500 to-yellow-500 text-white flex items-center gap-3 px-8 py-4 rounded-2xl shadow-lg hover:shadow-orange-400 transition-shadow duration-300"

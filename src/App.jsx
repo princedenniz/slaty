@@ -13,6 +13,8 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import TermsConditions from "./components/TermsCondition";
 import SignupForm from "./pages/SignupForm";
+import NewWidget from "./components/NewWidget";
+
 import ScrollToTop from "./components/ScrollToTop";
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
         {/* Home Route */}
         <Route path="/" element={<Hero/>}/>
         <Route path="/hero" element={<Hero/>}/>
+        <Route path="/newwidget" element={<NewWidget/>}/>
 
         {/* Signup Route */}
         <Route path="/how-it-works" element={<HowItWorks/>} />
