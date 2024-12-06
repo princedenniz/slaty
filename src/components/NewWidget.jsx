@@ -30,10 +30,10 @@ const NewWidget = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center mt-24 min-h-screen">
       {/* Container for the widget */}
-      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
-        <h1 className="text-xl font-semibold text-center mb-4">Join Our Waitlist</h1>
+      <div className="p-6 rounded-lg shadow-md w-full max-w-md">
+        <h1 className="text-xl font-semibold text-center text-white mb-4">Join Our Waitlist</h1>
         <div
           id="getWaitlistContainer"
           data-waitlist_id="22656"
