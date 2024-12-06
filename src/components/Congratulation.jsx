@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 const Congratulation = ({ data }) => {
   const [copied, setCopied] = useState(false);
 
+  console.log(data)
+
   // Copy referral link to clipboard
   const handleCopyLink = () => {
     navigator.clipboard
@@ -61,7 +63,7 @@ const Congratulation = ({ data }) => {
       <div className="mt-6 p-4 bg-gray-800 border border-gray-600 rounded-md w-full max-w-md">
         <p className="font-medium text-lg">Total referrals:</p>
         <p className="text-2xl font-extrabold text-orange-500">
-          {data.total_referrals}
+          {data.amount_referred}
         </p>
       </div>
 

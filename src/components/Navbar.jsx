@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const scrollToTop = ()=>{
+    window.scrollTo({top: 0, behavior: "smooth"});
+    navigate('/hero')
+  }
 
   return (
     <div className="w-screen top-0 fixed flex justify-center p-4 sm:p-6 z-30">
@@ -13,7 +19,7 @@ const Navbar = () => {
         {/* Header Section */}
         <div className="flex justify-between px-8 py-2 items-center">
           {/* Logo */}
-          <Link to="/" className="text-lg sm:text-xl md:text-2xl text-orange-600">
+          <Link onClick={scrollToTop} to="/hero" className="text-lg sm:text-xl md:text-2xl text-orange-600 hover:text-orange-400">
             SLATY
           </Link>
 

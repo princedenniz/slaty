@@ -3,17 +3,29 @@ import { useMutation } from "@tanstack/react-query";
 import { motion, AnimatePresence } from "framer-motion"; // Import Framer Motion for animations
 import Congratulation from "../components/Congratulation"; // Adjust path if needed
 
-const submitWaitlistData = async (data) => {
-  const response = await fetch("https://api.getwaitlist.com/api/v1/waiter", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data),
-  });
-  if (!response.ok) {
-    throw new Error("Failed to submit waitlist data");
+
+   // Function to validate the email on the FE.
+function validateEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      return true;
+    }
+    return false;
   }
-  return response.json();
-};
+
+    // Function to validate phone number
+    function validatePhone(phone) {
+        // Regular expression to validate phone number starting with +
+        const phoneRegex = /^\+\d{1,15}$/;
+      
+        // Check if the phone number matches the pattern
+        if (phoneRegex.test(phone)) {
+          return true; // Valid phone number
+        } else {
+          return false; // Invalid phone number
+        }
+      }
+
+  
 
 const SignupForm = () => {
   const [formData, setFormData] = useState({
@@ -24,6 +36,39 @@ const SignupForm = () => {
   });
   const [error, setError] = useState(null);
   const [successData, setSuccessData] = useState(null);
+
+  const submitWaitlistData = async (data) => {
+    if(!data.email){
+        setError("Please enter your email")
+        return;
+    }
+
+    if(validateEmail(data.email) === false){
+        setError("Please enter a valid email")
+        return;
+    }
+
+    if(!data.phone){
+        setError("Please enter phone number")
+        return;
+    }
+
+    if(validatePhone(data.phone) === false){
+        setError("Please enter a valid number starting with a '+' ")
+        return;
+    }
+
+
+  const response = await fetch("https://api.getwaitlist.com/api/v1/waiter", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+  if (!response.ok) {
+    throw new Error("Failed to submit waitlist data");
+  }
+  return response.json();
+};
 
   const mutation = useMutation({
     mutationFn: submitWaitlistData,
