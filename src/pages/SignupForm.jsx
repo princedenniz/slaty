@@ -110,39 +110,59 @@ const SignupForm = () => {
         </h1>
 
         <div className="space-y-4">
-          <input
-            type="text"
-            name="first_name"
-            placeholder="First Name"
-            value={formData.first_name}
-            onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500"
-          />
-          <input
-            type="text"
-            name="last_name"
-            placeholder="Last Name"
-            value={formData.last_name}
-            onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500"
-          />
-          <input
-            type="text"
-            name="phone"
-            placeholder="Phone Number"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500"
-          />
-        </div>
+  {/* First Name */}
+  <label className="block text-gray-700 font-medium">
+    First Name
+    <input
+      type="text"
+      name="first_name"
+      placeholder="First Name"
+      value={formData.first_name}
+      onChange={handleChange}
+      className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500 mt-1"
+    />
+  </label>
+
+  {/* Last Name */}
+  <label className="block text-gray-700 font-medium">
+    Last Name
+    <input
+      type="text"
+      name="last_name"
+      placeholder="Last Name"
+      value={formData.last_name}
+      onChange={handleChange}
+      className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500 mt-1"
+    />
+  </label>
+
+  {/* Email */}
+  <label className="block text-gray-700 font-medium">
+    Email
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      value={formData.email}
+      onChange={handleChange}
+      className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500 mt-1"
+    />
+  </label>
+
+  {/* Phone Number */}
+  <label className="block text-gray-700 font-medium">
+    Phone Number
+    <input
+      type="text"
+      name="phone"
+      placeholder="Phone Number"
+      value={formData.phone}
+      onChange={handleChange}
+      className="w-full p-3 border rounded bg-gray-400 focus:ring-2 focus:ring-orange-500 mt-1"
+    />
+  </label>
+</div>
+
 
         <button
           type="button"

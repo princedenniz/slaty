@@ -10,7 +10,7 @@ const Navbar = () => {
 
   const scrollToTop = ()=>{
     window.scrollTo({top: 0, behavior: "smooth"});
-    navigate('/hero')
+    navigate('/')
   }
 
   return (
@@ -19,7 +19,7 @@ const Navbar = () => {
         {/* Header Section */}
         <div className="flex justify-between px-8 py-2 items-center">
           {/* Logo */}
-          <Link onClick={scrollToTop} to="/hero" className="text-lg sm:text-xl md:text-2xl text-orange-600 hover:text-orange-400">
+          <Link onClick={scrollToTop} to="/" className="text-lg sm:text-xl md:text-2xl text-orange-600 hover:text-orange-400">
             SLATY
           </Link>
 
