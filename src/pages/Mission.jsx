@@ -44,14 +44,15 @@ const Mission = () => {
 
       {/* Animated Date Text */}
       <motion.h1
-        className="text-white text-2xl font-semibold text-center md:text-7xl"
+        className="text-white text-3xl font-semibold text-center md:text-6xl md:w-[70%]"
         initial="hidden"
         animate="visible"
         custom={1}
         variants={textVariant}
       >
-        Turning <span className="text-orange-500">Aspiration</span> Into <span className="text-orange-500">Achievements</span> By
-        <p className='px-8'>Making <span className="text-orange-500">SaaS</span> Creation Accessible To <span className="text-orange-500">All</span></p>
+        Slaty empowers students <span className="text-orange-500"> to overcome</span> academic challenges  <span className="text-orange-500">with tools that </span> 
+        inspire focus <span className="text-orange-500"> motivation, and success</span>
+        {/* <p className='px-8'>Making <span className="text-orange-500">SaaS</span> Creation Accessible To <span className="text-orange-500">All</span></p> */}
       </motion.h1>
 
       {/* Animated "Your Idea Is Reality" */}
@@ -73,7 +74,7 @@ const Mission = () => {
         custom={3}
         variants={textVariant}
       >
-        One-stop solution from idea to launch with development and marketing aid
+         Together, we help every student thrive
       </motion.p>
 
       {/* Animated Button */}

@@ -30,16 +30,16 @@ const Footer = () => {
 
       {/* Animated Heading */}
       <motion.h1
-        className="text-2xl md:text-6xl font-bold leading-snug"
+        className="text-2xl md:text-4xl text-center md:w-[50%] font-bold leading-snug"
         initial="hidden"
         animate="visible"
         custom={1}
         variants={textVariant}
       >
-        Let's Turn Your Dream Into Reality
+        Access live, real-time classes anytime, and get personalized help to excel in your studies.
       </motion.h1>
 
-      <div>
+      {/* <div>
         <motion.p
           className="text-gray-400 text-lg md:text-xl"
           animate="visible"
@@ -57,7 +57,7 @@ const Footer = () => {
         >
           and precision. Let’s make it happen.
         </motion.p>
-      </div>
+      </div> */}
 
       {/* Animated Button */}
       <motion.button
@@ -67,7 +67,7 @@ const Footer = () => {
         whileHover="hover"
         variants={buttonVariant}
       >
-        Book A Call
+        Join Waitlist
         <GoArrowDownRight className="text-2xl" />
       </motion.button>
 

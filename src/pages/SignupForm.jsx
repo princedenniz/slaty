@@ -59,15 +59,17 @@ const SignupForm = () => {
     }
 
 
-  const response = await fetch("https://api.getwaitlist.com/api/v1/waiter", {
+  const response = await fetch("https://api.getwaitlist.com/api/v1/signup", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
+
   if (!response.ok) {
     throw new Error("Failed to submit waitlist data");
   }
   return response.json();
+  
 };
 
   const mutation = useMutation({

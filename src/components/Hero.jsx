@@ -9,10 +9,7 @@ import { Link } from "react-router-dom";
 import Price from "../pages/Price";
 import WhatOurUserAreSaying from "../pages/WhatOurUserAreSaying";
 import OurCreativeMinds from "../pages/OurCreativeMinds";
-import AskedQuestion from "../pages/AskedQuestion";
 import LogoCarousel from "./LogoCarousel";
-import Footer from "./Footer";
-import SignupForm from "../pages/SignupForm";
 
 const Hero = () => {
   // Animation Variants
@@ -41,7 +38,7 @@ const Hero = () => {
 
   return (
     <div>
-      <div className="text-white flex flex-col justify-center w-screen items-center gap-7 pt-48">
+      <div className="text-white flex flex-col justify-center w-screen items-center gap-7 pt-40">
         {/* Animated "5 Spots Left" */}
         <motion.p
           className="text-gray-400 rounded-full border border-gray-800 w-[9rem] text-center p-2 bg-black"
@@ -54,25 +51,25 @@ const Hero = () => {
         </motion.p>
 
         {/* Animated Date Text */}
-        <motion.h1
-          className="text-orange-500 text-4xl font-bold md:text-7xl"
+        {/* <motion.h1
+          className="text-orange-500 text-4xl text-center font-bold md:text-6xl"
           initial="hidden"
           animate="visible"
           custom={1}
           variants={textVariant}
         >
-          <span className="text-white">It's</span> January 01
-        </motion.h1>
+          <span className="text-white">Join</span> the waitlist today 
+        </motion.h1> */}
 
         {/* Animated "Your Idea Is Reality" */}
         <motion.h1
-          className="text-4xl md:text-7xl font-bold"
+          className="text-4xl md:w-[70%] text-center md:text-6xl font-bold"
           initial="hidden"
           animate="visible"
           custom={2}
           variants={textVariant}
-        >
-          Your Idea Is Reality
+        ><span className="text-orange-500">Join</span> the waitlist today
+          and receive a FREE personalized study guide tailored to your academic needs!
         </motion.h1>
 
         {/* Animated Subtitle */}
@@ -112,7 +109,7 @@ const Hero = () => {
 
       <OurService />
 
-      <Price />
+      {/* <Price /> */}
 
       <WhatOurUserAreSaying />
 

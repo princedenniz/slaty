@@ -42,7 +42,7 @@ const OurCreativeMinds = () => {
         custom={1}
         variants={textVariant}
       >
-        We re real people building real solution-no fluff, no corperate jargon, just result
+        With Slaty, a tutor is always available to support your academic needs
       </motion.p>
 
       <div className="flex flex-col gap-6 md:flex-row w-full items-center justify-center md:gap-14 p-4">

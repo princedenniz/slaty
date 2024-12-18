@@ -21,7 +21,7 @@ const WhatOurUserAreSaying = () => {
         custom={0}
         variants={textVariant}
       >
-        5 Spots Left
+        Feedbacks
       </motion.p>
 
       {/* Animated Date Text */}
@@ -32,14 +32,14 @@ const WhatOurUserAreSaying = () => {
         custom={1}
         variants={textVariant}
       >
-        Trusted By Aspiring Enterpreneur Like You
+        We are trusted Globally
       </motion.h1>
 
       <div className="flex pt-28 w-screen justify-center flex-wrap gap-6">
         {/* First Card */}
-        <div className="md:border-r-2 border-gray-600 text-center p-9 flex flex-col gap-7 w-[30rem] border-b-2 sm:border-r-0">
-          <p>lyiee</p>
-          <p>lyiee</p>
+        <div className="md:border-r-2 border-gray-600 text-center p-9 flex flex-col gap-7 w-[30rem] border-b-2 sm:border-r-0 border-t-2 md:border-t-0">
+          {/* <p>lyiee</p>
+          <p>lyiee</p> */}
           <div>
             <p>"The speed and quality at which the</p>
             <p>QuickMVP team was able to transform</p>
@@ -53,8 +53,8 @@ const WhatOurUserAreSaying = () => {
 
         {/* Second Card */}
         <div className="md:border-r-2 border-gray-600 text-center p-9 flex flex-col gap-7 w-[30rem] border-b-2 border-r-0">
-          <p>lyiee</p>
-          <p>lyiee</p>
+          {/* <p>lyiee</p>
+          <p>lyiee</p> */}
           <div>
             <p>"The speed and quality at which the</p>
             <p>QuickMVP team was able to transform</p>
@@ -68,8 +68,8 @@ const WhatOurUserAreSaying = () => {
 
         {/* Third Card */}
         <div className="border-gray-600 text-center p-9 flex flex-col gap-7 w-[30rem] sm:border-b-2 sm:border-r-0">
-          <p>lyiee</p>
-          <p>lyiee</p>
+          {/* <p>lyiee</p>
+          <p>lyiee</p> */}
           <div>
             <p>"The speed and quality at which the</p>
             <p>QuickMVP team was able to transform</p>

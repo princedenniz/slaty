@@ -14,16 +14,16 @@ const OurService = () => {
 
   
   return (
-    <div className="text-white flex flex-col justify-center w-screen items-center gap-7 pt-48 p-10">
+    <div className="text-white flex flex-col justify-center w-screen items-center gap-7 pt-44 p-10">
       {/* Animated "5 Spots Left" */}
       <motion.p
-        className="text-gray-400 rounded-full border border-gray-800 w-[9rem] text-center p-2 bg-black"
+        className="text-gray-400 rounded-full border border-gray-800 w-[11rem] text-center p-2 bg-black"
         initial="hidden"
         animate="visible"
         custom={0}
         variants={textVariant}
       >
-        Our Service
+        Vision Statement
       </motion.p>
 
       {/* Animated Date Text */}
@@ -39,14 +39,13 @@ const OurService = () => {
       </motion.h1>
 
       <motion.p
-        className="text-gray-400 text-center p-3"
+        className="text-gray-400 md:w-[50%] text-center p-3"
         initial="hidden"
         animate="visible"
         custom={3}
         variants={textVariant}
       >
-        We create your SaaS product quickly and efficiently. Post-launch, we
-        empower you with marketing tools like AirMedia to achieve success.
+       To empower students to achieve academic success and personal growth by providing innovative tools, personalized support, and opportunities for learning and mentorship, fostering a community where everyone can thrive
       </motion.p>
 
       <div className="flex flex-col gap-6 md:flex-row w-full items-center justify-center md:gap-14 p-4">

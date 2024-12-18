@@ -29,6 +29,22 @@ const HowItWorks = () => {
     },
   };
 
+  const items = [
+    {
+      title: "Term Paper",
+      description: "A detailed academic essay that involves research on a specific topic, demonstrating understanding through structured arguments, analysis, and proper citations."
+    },
+    {
+      title: "Book Review",
+      description: "A critical analysis of a book, summarizing its content, themes, and evaluating its strengths and weaknesses, offering recommendations to potential readers."
+    },
+    {
+      title: "Project Writing",
+      description: "A structured report outlining a project's research, methodology, analysis, and conclusions, often with data and recommendations."
+    }
+  ];
+  
+
   return (
     <div className="text-white flex flex-col justify-center items-center gap-7 pt-20 px-4 w-full">
       {/* Title */}
@@ -45,9 +61,9 @@ const HowItWorks = () => {
       </motion.p>
 
       {/* Headings */}
-      <div className="text-center">
+      <div className="text-center flex flex-col justify-center items-center">
         <motion.h1
-          className="text-white text-xl font-semibold sm:text-3xl md:text-5xl lg:text-6xl"
+          className="text-white text-xl text-center md:w-[70%] font-semibold sm:text-3xl md:text-5xl lg:text-6xl"
           initial="hidden"
           animate="visible"
           variants={{
@@ -59,9 +75,9 @@ const HowItWorks = () => {
             },
           }}
         >
-          Your SaaS Brought To Life In
+          Slaty connects tutors with students, offering a chance to earn income while empowering academic success
         </motion.h1>
-        <motion.h1
+        {/* <motion.h1
           className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold"
           initial="hidden"
           animate="visible"
@@ -75,7 +91,7 @@ const HowItWorks = () => {
           }}
         >
           30 Days
-        </motion.h1>
+        </motion.h1> */}
       </div>
 
       {/* Subtitle */}
@@ -92,12 +108,13 @@ const HowItWorks = () => {
           },
         }}
       >
-        That drives impactful gain powerful results
+        Sign up today to start tutoring and earning!
+
       </motion.p>
 
       {/* Cards Section */}
       <div className="flex flex-wrap justify-center items-center gap-6 w-full px-4 md:px-8">
-        {["Plan Fast", "Build Fast", "Deliver Fast"].map((title, i) => {
+        {items.map((title, i) => {
           const ref = useRef(null);
           const isInView = useInView(ref, { once: true });
 
@@ -120,9 +137,9 @@ const HowItWorks = () => {
                 </motion.div>
               </div>
               <div className="pt-5 flex flex-col gap-3">
-                <h1 className="font-semibold text-lg md:text-2xl">{title}</h1>
+                <h1 className="font-semibold text-lg md:text-2xl">{title.title}</h1>
                 <p className="text-sm text-gray-400">
-                  In One day, we craft your project's blueprint.
+                  {title.description}
                 </p>
               </div>
             </motion.div>
