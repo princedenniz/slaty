@@ -4,21 +4,22 @@ import { motion } from 'framer-motion';
 const LogoCarousel = () => {
   // Array of logos
   const logos = [
-    'Buildify',
-    'Twitter',
-    'Facebook',
-    'Slaty',
-    'LinkedIn',
-    'iPhone',
-    'JavaScript',
-    'Vercel',
-    'Test',
+    'KnowledgeHub',
+    'LearnSphere',
+    'EduPro',
+    'BrightMinds',
+    'SkillSharp',
+    'StudyVault',
+    'Academix',
+    'FutureLearn',
+    'MentorPath',
   ];
+  
 
   return (
     <div className="text-white flex flex-col justify-center w-full items-center gap-7 pt-14">
       <p className="text-gray-500">
-        Building the future One Platform at a Time
+        Get the best Tutoring and Academic resources!
       </p>
 
       {/* Image Carousel Container */}
