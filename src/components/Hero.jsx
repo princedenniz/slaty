@@ -63,16 +63,18 @@ const Hero = () => {
 
         {/* Animated "Your Idea Is Reality" */}
         <motion.h1
-  className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-center md:w-[70%] leading-relaxed"
-  initial="hidden"
-  animate="visible"
-  custom={2}
-  variants={textVariant}
->
-  <span className="text-orange-500">SLATY</span> empowers students to excel by providing tools for organization, live tutoring, and academic resources. 
-  <br className="hidden md:block" /> Tutors can earn by sharing their expertise, fostering a thriving academic community.
-</motion.h1>
-
+          className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold text-center md:w-[70%] leading-relaxed"
+          initial="hidden"
+          animate="visible"
+          custom={2}
+          variants={textVariant}
+        >
+          <span className="text-orange-500">SLATY</span> empowers students to
+          excel by providing tools for organization, live tutoring, and academic
+          resources.
+          <br className="hidden md:block" /> Tutors can earn by sharing their
+          expertise, fostering a thriving academic community.
+        </motion.h1>
 
         {/* Animated Subtitle */}
         <motion.p
@@ -82,7 +84,8 @@ const Hero = () => {
           custom={3}
           variants={textVariant}
         >
-          Join the waitlist today and receive a FREE personalized study guide tailored to your academic needs!
+          Join the waitlist today and receive a FREE personalized study guide
+          tailored to your academic needs!
         </motion.p>
 
         {/* Animated Button */}
@@ -113,9 +116,9 @@ const Hero = () => {
 
       {/* <Price /> */}
 
-      <WhatOurUserAreSaying />
+      {/* <WhatOurUserAreSaying /> */}
 
-      <OurCreativeMinds />
+      {/* <OurCreativeMinds /> */}
 
       {/* <AskedQuestion/>
     <Footer/> */}
