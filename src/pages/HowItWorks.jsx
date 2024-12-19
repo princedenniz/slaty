@@ -148,7 +148,7 @@ const HowItWorks = () => {
       </div>
 
       {/* Animated Button */}
-      <motion.button
+      {/* <motion.button
         className="border border-gray-800 bg-orange-500 flex items-center gap-2 px-8 py-3 rounded-lg text-sm md:text-base"
         initial="hidden"
         animate="visible"
@@ -157,7 +157,7 @@ const HowItWorks = () => {
       >
         Learn More
         <GoArrowDownRight />
-      </motion.button>
+      </motion.button> */}
     </div>
   );
 };
