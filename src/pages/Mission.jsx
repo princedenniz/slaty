@@ -78,7 +78,7 @@ const Mission = () => {
       </motion.p>
 
       {/* Animated Button */}
-      <motion.button
+      {/* <motion.button
         className="flex items-center text-orange-500 gap-3 px-16 py-2 rounded-2xl"
         initial="hidden"
         animate="visible"
@@ -87,7 +87,7 @@ const Mission = () => {
       >
         Book A Call
         <GoArrowDownRight />
-      </motion.button>
+      </motion.button> */}
 
       <motion.div
   className="mt-20"

@@ -1,5 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import img3 from "../assets/sly3.png"
+import img4 from "../assets/sly4.png"
+import img5 from "../assets/sly7.png"
 
 const OurService = () => {
   // Animation Variants
@@ -50,19 +53,22 @@ const OurService = () => {
 
       <div className="flex flex-col gap-6 md:flex-row w-full items-center justify-center md:gap-14 p-4">
         {/* Card 1 */}
-        <div className="border rounded-2xl flex justify-center items-center border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
-          <div className="text-center text-gray-500">Content Placeholder</div>
-        </div>
+        <div className="border rounded-2xl flex justify-center items-center overflow-hidden border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
+  <img src={img3} className="max-w-full max-h-full object-contain" alt="" />
+</div>
+
 
         {/* Card 2 */}
-        <div className="border rounded-2xl flex justify-center items-center border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
-          <div className="text-center text-gray-500">Content Placeholder</div>
-        </div>
+        <div className="border rounded-2xl flex justify-center items-center overflow-hidden border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
+  <img src={img4} className="max-w-full max-h-full object-contain" alt="" />
+</div>
+
 
         {/* Card 3 */}
-        <div className="border rounded-2xl flex justify-center items-center border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
-          <div className="text-center text-gray-500">Content Placeholder</div>
-        </div>
+        <div className="border rounded-2xl flex justify-center items-center overflow-hidden border-gray-700 h-[15rem] md:h-[20rem] w-full md:w-[25%]">
+  <img src={img5} className="max-w-full max-h-full object-contain" alt="" />
+</div>
+
       </div>
     </div>
   );

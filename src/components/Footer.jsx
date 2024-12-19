@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white flex flex-col justify-center w-full items-center gap-10 mt-32 pt-32 px-4 text-center bg-gray-900 ">
+    <footer className="text-white flex flex-col justify-center w-full items-center gap-10 mt-32 pt-28 px-4 text-center bg-gray-900 ">
       <motion.p className="text-4xl font-bold text-orange-500">Slaty</motion.p>
 
       {/* Animated Heading */}

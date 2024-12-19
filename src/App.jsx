@@ -42,7 +42,7 @@ const App = () => {
         <Route path="/terms&conditions" element={<TermsConditions/>}/>
         {/* <Route path="/price" element={<Price/>}/> */}
       </Routes>
-      <AskedQuestion/>
+      {/* <AskedQuestion/> */}
       <Footer/>
     </Router>
   );

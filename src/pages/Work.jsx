@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import img1 from "../assets/slaty.jpg"
 
 const Work = () => {
   // Animation Variants
@@ -70,8 +71,9 @@ const Work = () => {
     </div>
 
     {/* Right Section */}
-    <div className="border rounded-2xl flex justify-center items-center border-gray-700 h-[20rem] md:h-[30rem] w-full md:w-[50%]">
-      <div className="text-center text-gray-500">Content Placeholder</div>
+    <div className="border rounded-2xl flex justify-center px-3 items-center border-gray-700 h-[20rem] md:h-[30rem] w-full md:w-[50%]">
+      {/* <div className="text-center text-gray-500">Content Placeholder</div> */}
+      <img src={img1} alt="" />
     </div>
   </div>
 </div>
