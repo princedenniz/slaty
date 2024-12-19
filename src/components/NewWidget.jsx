@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import Helmet from "react-helmet";
+import { useNavigate } from "react-router-dom"; // Assuming you're using React Router for navigation
 
 const NewWidget = () => {
+  const navigate = useNavigate(); // React Router hook for navigation
+
   useEffect(() => {
     const initializeWidget = () => {
       const existingScript = document.querySelector(
@@ -29,6 +32,10 @@ const NewWidget = () => {
     initializeWidget();
   }, []);
 
+  const handleNavigate = () => {
+    navigate("/lecturers-form"); // Replace with your private form route
+  };
+
   return (
     <div className="flex items-center justify-center mt-24 min-h-screen">
       {/* Container for the widget */}
@@ -36,9 +43,16 @@ const NewWidget = () => {
         <h1 className="text-xl font-semibold text-center text-white mb-4">Join Our Waitlist</h1>
         <div
           id="getWaitlistContainer"
-          data-waitlist_id="22656"
+          data-waitlist_id="23213"
           data-widget_type="WIDGET_1"
         ></div>
+        {/* Button to private form page */}
+        <button
+          onClick={handleNavigate}
+          className="mt-6 w-full py-2 px-4 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600 transition duration-200"
+        >
+          Go to Lecturer's Form
+        </button>
       </div>
 
       {/* Inject styles using Helmet */}
