@@ -33,7 +33,7 @@ const NewWidget = () => {
   }, []);
 
   const handleNavigate = () => {
-    navigate("/lecturers-form"); // Replace with your private form route
+    navigate("/newwidgettuto"); // Replace with your private form route
   };
 
   return (
@@ -51,7 +51,7 @@ const NewWidget = () => {
           onClick={handleNavigate}
           className="mt-6 w-full py-2 px-4 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600 transition duration-200"
         >
-          Go to Lecturer's Form
+          Go to Tuto's Form
         </button>
       </div>
 

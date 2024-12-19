@@ -16,6 +16,7 @@ import SignupForm from "./pages/SignupForm";
 import NewWidget from "./components/NewWidget";
 
 import ScrollToTop from "./components/ScrollToTop";
+import NewWidgetTuto from "./components/NewWidgetLecturer";
 const App = () => {
   return (
     <Router>
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/" element={<Hero/>}/>
         <Route path="/hero" element={<Hero/>}/>
         <Route path="/newwidget" element={<NewWidget/>}/>
+        <Route path="/newwidgettuto" element={<NewWidgetTuto/>}/>
 
         {/* Signup Route */}
         <Route path="/how-it-works" element={<HowItWorks/>} />
